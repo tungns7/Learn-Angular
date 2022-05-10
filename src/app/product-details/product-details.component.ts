@@ -10,7 +10,10 @@ import { CartService } from '../services/cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product!: prod.Product;
-  constructor(private route: ActivatedRoute, private cartService: CartService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) {}
   ngOnInit(): void {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
